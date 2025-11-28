@@ -1,4 +1,5 @@
 """Portal settings tests."""
+
 from plone import api
 
 import pytest
@@ -16,7 +17,7 @@ class TestPortalSettings:
             ["plone.smtp_host", "localhost"],
             ["plone.smtp_port", 25],
             ["plone.portal_timezone", "America/Sao_Paulo"],
-            ["plone.navigation_depth", 4],                  
+            ["plone.navigation_depth", 4],
         ],
     )
     # def test_portal_title(self, portal):
