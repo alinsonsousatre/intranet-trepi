@@ -3,6 +3,9 @@ from plone.dexterity.fti import DexterityFTI
 from trepi.intranet.content.area import Area
 from zope.component import createObject
 
+
+# from AccessControl import Unauthorized
+# from .exceptions import AccessControl_Unauthorized
 import pytest
 
 
@@ -54,6 +57,7 @@ class TestArea:
         assert behavior in get_behaviors(CONTENT_TYPE)
 
     def test_create(self, area_payload):
+        # with pytest.raises(AccessControl_Unauthorized, match=r"Cannot create Area"):
         with api.env.adopt_roles(["Manager"]):
             content = api.content.create(container=self.portal, **area_payload)
         assert content.portal_type == CONTENT_TYPE
