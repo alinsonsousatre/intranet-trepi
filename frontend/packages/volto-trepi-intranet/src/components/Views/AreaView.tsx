@@ -9,7 +9,7 @@ interface AreaViewProps {
   location?: {
     pathname: string;
   };
-  [key: string]: any; 
+  [key: string]: any;
 }
 
 const AreaView: React.FC<AreaViewProps> = (props) => {
