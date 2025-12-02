@@ -5,6 +5,11 @@ export interface Area extends Content {
   description: string;
   telefone?: string;
   email?: string;
+  endereco?: string;
+  complemento?: string;
+  cidade?: string;
+  estado?: string;
+  cep?: string;
   text?: {
     data: string;
     'content-type': string;

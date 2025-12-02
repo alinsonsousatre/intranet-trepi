@@ -17,6 +17,7 @@ class IArea(model.Schema):
             "telefone",
         ],
     )
+
     email = Email(
         title=_("Email"),
         required=True,
@@ -27,6 +28,24 @@ class IArea(model.Schema):
         description=_("Informe o telefone de contato"),
         required=False,
     )
+
+    model.fieldset(
+        "endereco",
+        _("Endereço"),
+        fields=["endereco", "complemento", "cidade", "estado", "cep"],
+    )
+
+    endereco = schema.Text(
+        title=_("Endereço"), description=_("Informe o endereço"), required=True
+    )
+
+    complemento = schema.Text(title=_("Complemento"), required=False)
+
+    cidade = schema.TextLine(title=_("Cidade"), required=True)
+
+    estado = schema.TextLine(title=_("Estado"), required=True)
+
+    cep = schema.TextLine(title=_("CEP"), required=False)
 
 
 @implementer(IArea)
