@@ -44,4 +44,26 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="trepi.intranet:default"
+      source="20251128002"
+      destination="20251202001"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona behaviors ao tipo Área"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="trepi.intranet:default"
+      source="20251202001"
+      destination="20251202002"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona tipo pessoa"
+        import_steps="typeinfo rolemap"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>

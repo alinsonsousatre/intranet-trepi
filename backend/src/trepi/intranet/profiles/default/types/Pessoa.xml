@@ -8,13 +8,13 @@
   <!-- Basic properties -->
   <property name="title"
             i18n:translate=""
-  >Área</property>
+  >Pessoa</property>
   <property name="description"
             i18n:translate=""
-  >Uma Área dentro do TRE-PI</property>
+  >Uma Pessoa dentro do TRE-PI</property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">Area</property>
+  <property name="factory">Pessoa</property>
 
   <!-- Hierarchy control -->
   <property name="filter_content_types">False</property>
@@ -22,9 +22,9 @@
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">trepi.intranet.area.add</property>
-  <property name="klass">trepi.intranet.content.area.Area</property>
-  <property name="schema">trepi.intranet.content.area.IArea</property>
+  <property name="add_permission">trepi.intranet.pessoa.add</property>
+  <property name="klass">trepi.intranet.content.pessoa.Pessoa</property>
+  <property name="schema">trepi.intranet.content.pessoa.IPessoa</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors"
@@ -33,11 +33,10 @@
     <element value="plone.basic" />
     <element value="plone.namefromtitle" />
     <element value="plone.shortname" />
+    <element value="plone.leadimage" />
     <element value="plone.excludefromnavigation" />
     <element value="trepi.intranet.behavior.contato" />
     <element value="trepi.intranet.behavior.endereco" />
-    <element value="volto.blocks" />
-    <element value="volto.preview_image" />
     <element value="plone.constraintypes" />
     <element value="plone.versioning" />
   </property>
