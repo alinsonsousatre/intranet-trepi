@@ -3,4 +3,8 @@
       name="trepi.intranet.vocabulary.estados"
       component=".estados.vocab_estados"
       />
+  <utility
+      name="trepi.intranet.vocabulary.cargos"
+      component=".cargos.vocab_cargos"
+      />
 </configure>
