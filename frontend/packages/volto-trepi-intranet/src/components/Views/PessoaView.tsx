@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from '@plone/volto/components/theme/Image/Image';
-import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import { Container } from '@plone/components';
 import ContactInfo from 'volto-trepi-intranet/components/ContactInfo/ContactInfo';
 import EnderecoInfo from 'volto-trepi-intranet/components/EnderecoInfo/EnderecoInfo';
