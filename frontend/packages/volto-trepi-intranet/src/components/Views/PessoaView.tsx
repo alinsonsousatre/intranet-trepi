@@ -5,6 +5,7 @@ import { Container } from '@plone/components';
 import ContactInfo from 'volto-trepi-intranet/components/ContactInfo/ContactInfo';
 import EnderecoInfo from 'volto-trepi-intranet/components/EnderecoInfo/EnderecoInfo';
 import type { Pessoa } from 'volto-trepi-intranet/types/content';
+import AreaInfo from '../AreaInfo/AreaInfo';
 
 interface PessoaViewProps {
   content: Pessoa;
@@ -37,11 +38,12 @@ const PessoaView: React.FC<PessoaViewProps> = (props) => {
       {content.description && (
         <p className="documentDescription">{content.description}</p>
       )}
-      {content.area && (
+      {/* {content.area && (
         <UniversalLink className={'area'} item={content.area}>
           {content.area.title}
         </UniversalLink>
-      )}
+      )} */}
+      <AreaInfo content={content.area} icon />
       <ContactInfo content={content} />
       <EnderecoInfo content={content} />
     </Container>

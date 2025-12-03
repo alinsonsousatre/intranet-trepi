@@ -25,7 +25,7 @@ const EnderecoInfo: React.FC<EnderecoInfoProps> = ({ content }) => {
       </Container>
       <Container className="estado">
         <span className="label">estado</span>:{' '}
-        <span className="value">{estado.token}</span>
+        {estado != null && <span className="value">{estado.token}</span>}
       </Container>
       <Container className="cep">
         <span className="label">cep</span>: <span className="value">{cep}</span>
