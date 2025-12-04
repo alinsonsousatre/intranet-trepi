@@ -1,5 +1,6 @@
 from plone import api
 from plone.dexterity.fti import DexterityFTI
+from Products.ZCatalog.CatalogBrains import AbstractCatalogBrain
 from trepi.intranet.content.area import Area
 from zope.component import createObject
 
@@ -83,3 +84,25 @@ class TestArea:
             payload["description"] = ""
             area = api.content.create(container=container, **payload)
         assert area.exclude_from_nav is True
+
+    def test_subscriber_modified_with_description_value(self, area_payload):
+        container = self.portal
+        with api.env.adopt_roles(["Manager"]):
+            brains: list[AbstractCatalogBrain] = api.content.find(portal_type="Area")
+            for brain in brains:
+                area: Area = brain.getObject()
+                area_modificada = area.getObject()
+                area_modificada.description = "teste com descricao"
+                assert area_modificada.exclude_from_nav is False
+                break
+
+    def test_subscriber_modified_without_description_value(self, area_payload):
+        container = self.portal
+        with api.env.adopt_roles(["Manager"]):
+            brains: list[AbstractCatalogBrain] = api.content.find(portal_type="Area")
+            for brain in brains:
+                area: Area = brain.getObject()
+                area_modificada = area.getObject()
+                area_modificada.description = ""
+                assert area_modificada.exclude_from_nav is True
+                break
