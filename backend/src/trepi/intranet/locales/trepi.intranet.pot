@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-11-28 12:33+0000\n"
+"POT-Creation-Date: 2025-12-05 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,226 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: trepi.intranet\n"
 
-#: trepi/intranet/profiles.zcml:22
+#: trepi/intranet/vocabularies/estados.py:9
+msgid "Acre"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:10
+msgid "Alagoas"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:11
+msgid "Amapá"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:12
+msgid "Amazonas"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:13
+msgid "Bahia"
+msgstr ""
+
+#: trepi/intranet/behaviors/endereco.py:45
+msgid "CEP"
+msgstr ""
+
+#: trepi/intranet/content/pessoa.py:14
+msgid "Cargo"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:14
+msgid "Ceará"
+msgstr ""
+
+#: trepi/intranet/behaviors/endereco.py:35
+msgid "Cidade"
+msgstr ""
+
+#: trepi/intranet/behaviors/endereco.py:29
+msgid "Complemento"
+msgstr ""
+
+#: trepi/intranet/behaviors/contato.py:16
+msgid "Contato"
+msgstr ""
+
+#: trepi/intranet/profiles.zcml:23
 msgid "Create example content to showcase the new website"
 msgstr ""
 
-#: trepi/intranet/profiles.zcml:22
+#: trepi/intranet/vocabularies/estados.py:15
+msgid "Distrito Federal"
+msgstr ""
+
+#: trepi/intranet/behaviors/contato.py:23
+msgid "Email"
+msgstr ""
+
+#: trepi/intranet/behaviors/endereco.py:14
+msgid "Endereço"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:16
+msgid "Espírito Santo"
+msgstr ""
+
+#: trepi/intranet/behaviors/endereco.py:40
+msgid "Estado"
+msgstr ""
+
+#: trepi/intranet/behaviors/endereco.py:30
+msgid "Ex. Anexo, Sala"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:17
+msgid "Goiás"
+msgstr ""
+
+#: trepi/intranet/behaviors/contato.py:30
+msgid "Informe o telefone de contato"
+msgstr ""
+
+#: trepi/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Intranet"
+msgstr ""
+
+#: trepi/intranet/profiles.zcml:23
 msgid "Intranet TRE-PI: Example content"
 msgstr ""
 
-#: trepi/intranet/profiles.zcml:13
+#: trepi/intranet/profiles.zcml:14
 msgid "Intranet TRE-PI: Install"
 msgstr ""
 
-#: trepi/intranet/profiles.zcml:30
+#: trepi/intranet/profiles.zcml:31
 msgid "Intranet TRE-PI: Uninstall"
 msgstr ""
 
-#: trepi/intranet/profiles.zcml:13
+#: trepi/intranet/vocabularies/estados.py:18
+msgid "Maranhão"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:19
+msgid "Mato Grosso"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:20
+msgid "Mato Grosso do Sul"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:21
+msgid "Minas Gerais"
+msgstr ""
+
+#: trepi/intranet/profiles.zcml:14
 msgid "Package to configure a new Intranet TRE-PI site"
 msgstr ""
 
-#: trepi/intranet/profiles.zcml:30
+#: trepi/intranet/vocabularies/estados.py:24
+msgid "Paraná"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:23
+msgid "Paraíba"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:22
+msgid "Pará"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:25
+msgid "Pernambuco"
+msgstr ""
+
+#: trepi/intranet/profiles/default/types/Pessoa.xml
+msgid "Pessoa"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:26
+msgid "Piauí"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:28
+msgid "Rio Grande do Norte"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:29
+msgid "Rio Grande do Sul"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:27
+msgid "Rio de Janeiro"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:30
+msgid "Rondônia"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:31
+msgid "Roraima"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:32
+msgid "Santa Catarina"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:34
+msgid "Sergipe"
+msgstr ""
+
+#: trepi/intranet/vocabularies/cargos.py:9
+msgid "Servidor"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:33
+msgid "São Paulo"
+msgstr ""
+
+#: trepi/intranet/behaviors/contato.py:29
+msgid "Telefone"
+msgstr ""
+
+#: trepi/intranet/vocabularies/cargos.py:10
+msgid "Terceirizado"
+msgstr ""
+
+#: trepi/intranet/vocabularies/estados.py:35
+msgid "Tocantins"
+msgstr ""
+
+#: trepi/intranet/profiles/default/types/Pessoa.xml
+msgid "Uma Pessoa dentro do TRE-PI"
+msgstr ""
+
+#: trepi/intranet/profiles/default/types/Area.xml
+msgid "Uma Área dentro do TRE-PI"
+msgstr ""
+
+#: trepi/intranet/profiles.zcml:31
 msgid "Uninstall Intranet TRE-PI setup."
+msgstr ""
+
+#. Default: "Filtrar por Área."
+#: trepi/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "description_area"
+msgstr ""
+
+#. Default: "Filtrar por cargo."
+#: trepi/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "description_cargo"
+msgstr ""
+
+#. Default: "Área"
+#: trepi/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "label_area"
+msgstr ""
+
+#. Default: "Cargo"
+#: trepi/intranet/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "label_cargo"
+msgstr ""
+
+#: trepi/intranet/profiles/default/types/Area.xml
+msgid "Área"
 msgstr ""

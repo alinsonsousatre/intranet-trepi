@@ -86,23 +86,42 @@ class TestArea:
         assert area.exclude_from_nav is True
 
     def test_subscriber_modified_with_description_value(self, area_payload):
+        from copy import deepcopy
+        from zope.event import notify
+        from zope.lifecycleevent import ObjectModifiedEvent
+
         container = self.portal
         with api.env.adopt_roles(["Manager"]):
+            payload = deepcopy(area_payload)
+            payload["description"] = ""
+            api.content.create(container=container, **payload)
+        with api.env.adopt_roles(["Manager"]):
             brains: list[AbstractCatalogBrain] = api.content.find(portal_type="Area")
+            assert len(brains) > 0
             for brain in brains:
-                area: Area = brain.getObject()
-                area_modificada = area.getObject()
+                area_modificada: Area = brain.getObject()
                 area_modificada.description = "teste com descricao"
+                # area_modificada.reindexObject()
+                notify(ObjectModifiedEvent(area_modificada))
                 assert area_modificada.exclude_from_nav is False
                 break
 
     def test_subscriber_modified_without_description_value(self, area_payload):
+        from zope.event import notify
+        from zope.lifecycleevent import ObjectModifiedEvent
+
         container = self.portal
         with api.env.adopt_roles(["Manager"]):
+            api.content.create(
+                container=container,
+                **area_payload,
+            )
+        with api.env.adopt_roles(["Manager"]):
             brains: list[AbstractCatalogBrain] = api.content.find(portal_type="Area")
+            assert len(brains) > 0
             for brain in brains:
-                area: Area = brain.getObject()
-                area_modificada = area.getObject()
+                area_modificada: Area = brain.getObject()
                 area_modificada.description = ""
+                notify(ObjectModifiedEvent(area_modificada))
                 assert area_modificada.exclude_from_nav is True
                 break
